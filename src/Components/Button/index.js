@@ -4,7 +4,7 @@ import * as C from './styles';
 export default function Button(props) {
   return (
     <C.Button
-      onClick={() => props.toggleButton(props.value)}
+      onClick={() => props.onClick(props.value)}
       checked={props.checked}
     >
       {props.checked ? 'OK ✔' : 'Check'}

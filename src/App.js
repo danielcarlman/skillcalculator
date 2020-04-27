@@ -4,7 +4,7 @@ import * as C from './styles';
 import Button from './Components/Button';
 import Navbar from './Components/Navbar';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,24 +24,28 @@ class App extends Component {
   toggleButton = (value) => {
     this.setState({ [value]: !this.state[value] });
     console.log(value);
-  };
 
-  // changeCount = () => {
-  //   this.setState(({ count }) => ({
-  //     count: count + 1,
-  //   }));
-  // };
+    if (this.state[value]) {
+      this.setState(({ count }) => ({
+        count: count - 1,
+      }));
+    } else {
+      this.setState(({ count }) => ({
+        count: count + 1,
+      }));
+    }
+  };
 
   render() {
     return (
       <C.Container>
         <Navbar />
-        <C.Counter>{this.state.count} out of 6</C.Counter>
+        <C.Counter>{this.state.count} out of 9</C.Counter>
         <C.BoxContainer>
           <C.Box color='darkseagreen'>
             <h1>HTML</h1>
             <Button
-              toggleButton={this.toggleButton}
+              onClick={this.toggleButton}
               checked={this.state.html}
               value={'html'}
             />
@@ -49,7 +53,7 @@ class App extends Component {
           <C.Box color='blue'>
             <h1>CSS - BOX MODEL</h1>
             <Button
-              toggleButton={this.toggleButton}
+              onClick={this.toggleButton}
               checked={this.state.cssboxmodel}
               value={'cssboxmodel'}
             />
@@ -57,7 +61,7 @@ class App extends Component {
           <C.Box color='greenyellow'>
             <h1>CSS FLEXBOX</h1>
             <Button
-              toggleButton={this.toggleButton}
+              onClick={this.toggleButton}
               checked={this.state.cssflexbox}
               value={'cssflexbox'}
             />
@@ -65,7 +69,7 @@ class App extends Component {
           <C.Box color='orange'>
             <h1>CSS GRID</h1>
             <Button
-              toggleButton={this.toggleButton}
+              onClick={this.toggleButton}
               checked={this.state.cssgrid}
               value={'cssgrid'}
             />
@@ -73,7 +77,7 @@ class App extends Component {
           <C.Box color='burlywood'>
             <h1>CSS SASS</h1>
             <Button
-              toggleButton={this.toggleButton}
+              onClick={this.toggleButton}
               checked={this.state.csssass}
               value={'csssass'}
             />
@@ -81,7 +85,7 @@ class App extends Component {
           <C.Box color='darkolivegreen'>
             <h1>CSS LESS</h1>
             <Button
-              toggleButton={this.toggleButton}
+              onClick={this.toggleButton}
               checked={this.state.cssless}
               value={'cssless'}
             />
@@ -89,7 +93,7 @@ class App extends Component {
           <C.Box color='purple'>
             <h1>CSS MEDIA QUERIES</h1>
             <Button
-              toggleButton={this.toggleButton}
+              onClick={this.toggleButton}
               checked={this.state.cssmediaqueries}
               value={'cssmediaqueries'}
             />
@@ -97,7 +101,7 @@ class App extends Component {
           <C.Box color='crimson'>
             <h1>CSS BOOTSTRAP</h1>
             <Button
-              toggleButton={this.toggleButton}
+              onClick={this.toggleButton}
               checked={this.state.cssbootstrap}
               value={'cssbootstrap'}
             />
@@ -105,7 +109,7 @@ class App extends Component {
           <C.Box color='cyan'>
             <h1>JAVASCRIPT ES6 - ARROW FUNCTIONS</h1>
             <Button
-              toggleButton={this.toggleButton}
+              onClick={this.toggleButton}
               checked={this.state.javascriptarrowfunction}
               value={'javascriptarrowfunction'}
             />
@@ -115,5 +119,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
