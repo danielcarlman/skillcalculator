@@ -5,29 +5,38 @@ import Button from './Components/Button';
 import Navbar from './Components/Navbar';
 
 class App extends Component {
-  state = {
-    html: false,
-    cssboxmodel: false,
-    cssflexbox: false,
-    cssgrid: false,
-    csssass: false,
-    cssless: false,
-    cssmediaqueries: false,
-    cssbootstrap: false,
-    javascriptarrowfunction: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+      html: false,
+      cssboxmodel: false,
+      cssflexbox: false,
+      cssgrid: false,
+      csssass: false,
+      cssless: false,
+      cssmediaqueries: false,
+      cssbootstrap: false,
+      javascriptarrowfunction: false,
+    };
+  }
 
   toggleButton = (value) => {
     this.setState({ [value]: !this.state[value] });
     console.log(value);
   };
 
+  // changeCount = () => {
+  //   this.setState(({ count }) => ({
+  //     count: count + 1,
+  //   }));
+  // };
+
   render() {
     return (
       <C.Container>
         <Navbar />
-        <C.Title>Front-End Skill Calculator</C.Title>
-
+        <C.Counter>{this.state.count} out of 6</C.Counter>
         <C.BoxContainer>
           <C.Box color='darkseagreen'>
             <h1>HTML</h1>

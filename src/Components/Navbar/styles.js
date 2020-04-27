@@ -4,11 +4,15 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 10rem;
   width: 100%;
-  background: lightsalmon;
+  background: orchid;
   position: sticky;
 `;
 
-export { Container };
+const Title = styled.h1`
+  font-size: 3rem;
+`;
+
+export { Container, Title };

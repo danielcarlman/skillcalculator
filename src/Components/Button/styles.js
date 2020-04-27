@@ -6,6 +6,8 @@ const Button = styled.button`
   border: none;
   border-radius: 20px;
   padding: 10px 15px;
+  width: 100px;
+  min-height: 37px;
   background-color: ${(props) => (props.checked ? 'green' : 'red')};
   color: white;
   &:hover {
