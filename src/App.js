@@ -25,92 +25,97 @@ export default class App extends Component {
     this.setState({ [value]: !this.state[value] });
     console.log(value);
 
-    if (this.state[value]) {
-      this.setState(({ count }) => ({
-        count: count - 1,
-      }));
-    } else {
-      this.setState(({ count }) => ({
-        count: count + 1,
-      }));
-    }
+    this.state[value]
+      ? this.setState(({ count }) => ({
+          count: count - 1,
+        }))
+      : this.setState(({ count }) => ({
+          count: count + 1,
+        }));
   };
 
   render() {
+    const {
+      html,
+      cssboxmodel,
+      cssflexbox,
+      cssgrid,
+      csssass,
+      cssless,
+      cssmediaqueries,
+      cssbootstrap,
+      javascriptarrowfunction,
+    } = this.state;
     return (
       <C.Container>
         <Navbar />
         <C.Counter>{this.state.count} out of 9</C.Counter>
         <C.BoxContainer>
-          <C.Box color='darkseagreen'>
+          <C.Box color='#093145'>
             <h1>HTML</h1>
-            <Button
-              onClick={this.toggleButton}
-              checked={this.state.html}
-              value={'html'}
-            />
+            <Button onClick={this.toggleButton} checked={html} value={'html'} />
           </C.Box>
-          <C.Box color='blue'>
+          <C.Box color='#9A2617'>
             <h1>CSS - BOX MODEL</h1>
             <Button
               onClick={this.toggleButton}
-              checked={this.state.cssboxmodel}
+              checked={cssboxmodel}
               value={'cssboxmodel'}
             />
           </C.Box>
-          <C.Box color='greenyellow'>
-            <h1>CSS FLEXBOX</h1>
+          <C.Box color='#829356'>
+            <h1>CSS - FLEXBOX</h1>
             <Button
               onClick={this.toggleButton}
-              checked={this.state.cssflexbox}
+              checked={cssflexbox}
               value={'cssflexbox'}
             />
           </C.Box>
-          <C.Box color='orange'>
-            <h1>CSS GRID</h1>
+          <C.Box color='#3C6478'>
+            <h1>CSS - GRID</h1>
             <Button
               onClick={this.toggleButton}
-              checked={this.state.cssgrid}
+              checked={cssgrid}
               value={'cssgrid'}
             />
           </C.Box>
-          <C.Box color='burlywood'>
-            <h1>CSS SASS</h1>
+          <C.Box color='#CD594A'>
+            <h1>CSS - SASS</h1>
             <Button
               onClick={this.toggleButton}
-              checked={this.state.csssass}
+              checked={csssass}
               value={'csssass'}
             />
           </C.Box>
           <C.Box color='darkolivegreen'>
-            <h1>CSS LESS</h1>
+            <h1>CSS - LESS</h1>
             <Button
               onClick={this.toggleButton}
-              checked={this.state.cssless}
+              checked={cssless}
               value={'cssless'}
             />
           </C.Box>
           <C.Box color='purple'>
-            <h1>CSS MEDIA QUERIES</h1>
+            <h1>CSS - MEDIA QUERIES</h1>
             <Button
               onClick={this.toggleButton}
-              checked={this.state.cssmediaqueries}
+              checked={cssmediaqueries}
               value={'cssmediaqueries'}
             />
           </C.Box>
           <C.Box color='crimson'>
-            <h1>CSS BOOTSTRAP</h1>
+            <h1>CSS - BOOTSTRAP</h1>
             <Button
               onClick={this.toggleButton}
-              checked={this.state.cssbootstrap}
+              checked={cssbootstrap}
               value={'cssbootstrap'}
             />
           </C.Box>
-          <C.Box color='cyan'>
-            <h1>JAVASCRIPT ES6 - ARROW FUNCTIONS</h1>
+          <C.Box color='teal'>
+            <h1>JS ES6 - ARROW FUNCTIONS</h1>
             <Button
               onClick={this.toggleButton}
-              checked={this.state.javascriptarrowfunction}
+              checked={javascriptarrowfunction}
               value={'javascriptarrowfunction'}
             />
           </C.Box>

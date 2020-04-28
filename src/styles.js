@@ -6,6 +6,7 @@ const Container = styled.div`
   align-items: center;
   background-color: black;
   color: white;
+  min-width: 350px;
 `;
 
 const Counter = styled.h1`
