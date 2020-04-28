@@ -4,6 +4,24 @@ import * as C from './styles';
 import Button from './Components/Button';
 import Navbar from './Components/Navbar';
 
+let skills = [
+  {
+    id: 'html',
+    title: 'HTML',
+    color: '#093145',
+  },
+  {
+    id: 'cssboxmodel',
+    title: 'CSS - Box Model',
+    color: '#9A2617',
+  },
+  {
+    id: 'cssflexbox',
+    title: 'CSS - Flexbox',
+    color: '#829356',
+  },
+];
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -46,80 +64,27 @@ export default class App extends Component {
       cssbootstrap,
       javascriptarrowfunction,
     } = this.state;
+
+    const createBox = () => {
+      skills.map((skill) => {
+        return (
+          <C.Box color={skill.color}>
+            <h1>{skill.title}</h1>
+            <Button
+              onClick={this.toggleButton}
+              checked={skill.id}
+              value={skill.id}
+            />
+          </C.Box>
+        );
+      });
+    };
+
     return (
       <C.Container>
         <Navbar />
         <C.Counter>{this.state.count} out of 9</C.Counter>
-        <C.BoxContainer>
-          <C.Box color='#093145'>
-            <h1>HTML</h1>
-            <Button onClick={this.toggleButton} checked={html} value={'html'} />
-          </C.Box>
-          <C.Box color='#9A2617'>
-            <h1>CSS - BOX MODEL</h1>
-            <Button
-              onClick={this.toggleButton}
-              checked={cssboxmodel}
-              value={'cssboxmodel'}
-            />
-          </C.Box>
-          <C.Box color='#829356'>
-            <h1>CSS - FLEXBOX</h1>
-            <Button
-              onClick={this.toggleButton}
-              checked={cssflexbox}
-              value={'cssflexbox'}
-            />
-          </C.Box>
-          <C.Box color='#3C6478'>
-            <h1>CSS - GRID</h1>
-            <Button
-              onClick={this.toggleButton}
-              checked={cssgrid}
-              value={'cssgrid'}
-            />
-          </C.Box>
-          <C.Box color='#CD594A'>
-            <h1>CSS - SASS</h1>
-            <Button
-              onClick={this.toggleButton}
-              checked={csssass}
-              value={'csssass'}
-            />
-          </C.Box>
-          <C.Box color='darkolivegreen'>
-            <h1>CSS - LESS</h1>
-            <Button
-              onClick={this.toggleButton}
-              checked={cssless}
-              value={'cssless'}
-            />
-          </C.Box>
-          <C.Box color='purple'>
-            <h1>CSS - MEDIA QUERIES</h1>
-            <Button
-              onClick={this.toggleButton}
-              checked={cssmediaqueries}
-              value={'cssmediaqueries'}
-            />
-          </C.Box>
-          <C.Box color='crimson'>
-            <h1>CSS - BOOTSTRAP</h1>
-            <Button
-              onClick={this.toggleButton}
-              checked={cssbootstrap}
-              value={'cssbootstrap'}
-            />
-          </C.Box>
-          <C.Box color='teal'>
-            <h1>JS ES6 - ARROW FUNCTIONS</h1>
-            <Button
-              onClick={this.toggleButton}
-              checked={javascriptarrowfunction}
-              value={'javascriptarrowfunction'}
-            />
-          </C.Box>
-        </C.BoxContainer>
+        <C.BoxContainer>{createBox()}</C.BoxContainer>
       </C.Container>
     );
   }
