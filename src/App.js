@@ -18,7 +18,37 @@ let skills = [
   {
     id: 'cssflexbox',
     title: 'CSS - Flexbox',
+    color: 'seagreen',
+  },
+  {
+    id: 'cssgrid',
+    title: 'CSS - Grid',
     color: '#829356',
+  },
+  {
+    id: 'csssass',
+    title: 'CSS - SASS',
+    color: 'navy',
+  },
+  {
+    id: 'cssless',
+    title: 'CSS - LESS',
+    color: 'darkslateblue',
+  },
+  {
+    id: 'cssmediaqueries',
+    title: 'CSS - Media Queries',
+    color: 'darkmagenta',
+  },
+  {
+    id: 'cssbootstrap',
+    title: 'CSS - Bootstrap',
+    color: 'crimson',
+  },
+  {
+    id: 'javascriptarrowfunction',
+    title: 'JS - Arrow Function',
+    color: '#107896',
   },
 ];
 
@@ -52,39 +82,25 @@ export default class App extends Component {
         }));
   };
 
+  renderSkills = () => {
+    return skills.map((skill) => (
+      <C.Box color={skill.color}>
+        <h1>{skill.title}</h1>
+        <Button
+          onClick={this.toggleButton}
+          checked={this.state[skill.id]}
+          value={skill.id}
+        />
+      </C.Box>
+    ));
+  };
+
   render() {
-    const {
-      html,
-      cssboxmodel,
-      cssflexbox,
-      cssgrid,
-      csssass,
-      cssless,
-      cssmediaqueries,
-      cssbootstrap,
-      javascriptarrowfunction,
-    } = this.state;
-
-    const createBox = () => {
-      skills.map((skill) => {
-        return (
-          <C.Box color={skill.color}>
-            <h1>{skill.title}</h1>
-            <Button
-              onClick={this.toggleButton}
-              checked={skill.id}
-              value={skill.id}
-            />
-          </C.Box>
-        );
-      });
-    };
-
     return (
       <C.Container>
         <Navbar />
         <C.Counter>{this.state.count} out of 9</C.Counter>
-        <C.BoxContainer>{createBox()}</C.BoxContainer>
+        <C.BoxContainer>{this.renderSkills()}</C.BoxContainer>
       </C.Container>
     );
   }
