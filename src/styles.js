@@ -32,7 +32,7 @@ const BoxContainer = styled.div`
   grid-gap: 30px;
   width: 100%;
   height: 100vh;
-  padding: 30px 30px;
+  padding: 30px 50px;
 `;
 
 const Box = styled.div`
