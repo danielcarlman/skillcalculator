@@ -6,7 +6,6 @@ const Container = styled.div`
   align-items: center;
   background-color: black;
   color: white;
-  min-width: 350px;
 `;
 const CounterContainer = styled.div`
   display: flex;
@@ -28,7 +27,7 @@ const Counter = styled.h1`
 
 const BoxContainer = styled.div`
   display: grid;
-  grid-template-rows: repeat(14, 150px);
+  grid-template-rows: repeat(14, 250px);
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 30px;
   width: 100%;
