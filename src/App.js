@@ -26,6 +26,16 @@ let skills = [
     color: '#829356',
   },
   {
+    id: 'csscustomproperties',
+    title: 'CSS - Custom Properties',
+    color: '#349456',
+  },
+  {
+    id: 'cssscss',
+    title: 'CSS - SCSS',
+    color: 'violet',
+  },
+  {
     id: 'csssass',
     title: 'CSS - SASS',
     color: 'navy',
@@ -46,9 +56,24 @@ let skills = [
     color: 'crimson',
   },
   {
+    id: 'javascriptconstandlet',
+    title: 'JS ES6 - Const and Let',
+    color: '#339933',
+  },
+  {
     id: 'javascriptarrowfunction',
-    title: 'JS - Arrow Function',
-    color: '#107896',
+    title: 'JS ES6 - Arrow Function',
+    color: '#cc33ff',
+  },
+  {
+    id: 'javascriptternary',
+    title: 'JS ES6 - Ternary Operator',
+    color: '#0066ff',
+  },
+  {
+    id: 'javascriptclosures',
+    title: 'JS - Closures',
+    color: '#ff6600',
   },
 ];
 
@@ -99,7 +124,11 @@ export default class App extends Component {
     return (
       <C.Container>
         <Navbar />
-        <C.Counter>{this.state.count} out of 9</C.Counter>
+        <C.CounterContainer>
+          <C.Counter>
+            {this.state.count} out of {skills.length}
+          </C.Counter>
+        </C.CounterContainer>
         <C.BoxContainer>{this.renderSkills()}</C.BoxContainer>
       </C.Container>
     );
