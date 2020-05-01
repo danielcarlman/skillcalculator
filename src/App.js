@@ -8,57 +8,77 @@ let skills = [
   {
     id: 'html',
     title: 'HTML',
+    color: '#930700',
+  },
+  {
+    id: 'git',
+    title: 'Git (Version Control)',
     color: '#093145',
   },
   {
     id: 'cssboxmodel',
     title: 'CSS - Box Model',
-    color: '#9A2617',
+    color: '#339933',
   },
   {
     id: 'cssflexbox',
     title: 'CSS - Flexbox',
-    color: 'seagreen',
+    color: '#394007',
   },
   {
     id: 'cssgrid',
     title: 'CSS - Grid',
-    color: '#829356',
+    color: '#464F30',
   },
   {
     id: 'csscustomproperties',
     title: 'CSS - Custom Properties',
-    color: '#349456',
+    color: '#215E39',
   },
   {
     id: 'cssscss',
     title: 'CSS - SCSS',
-    color: 'violet',
+    color: '#5C00B8',
   },
   {
     id: 'csssass',
     title: 'CSS - SASS',
-    color: 'navy',
+    color: '#00005C',
   },
   {
     id: 'cssless',
     title: 'CSS - LESS',
-    color: 'darkslateblue',
+    color: '#342E5C',
   },
   {
     id: 'cssmediaqueries',
     title: 'CSS - Media Queries',
-    color: 'darkmagenta',
+    color: '#8B008B',
   },
   {
-    id: 'cssbootstrap',
-    title: 'CSS - Bootstrap',
-    color: 'crimson',
+    id: 'cssstyledcomponents',
+    title: 'JS/CSS - Styled Components',
+    color: '#910D27',
+  },
+  {
+    id: 'javascriptclosures',
+    title: 'JS - Closures',
+    color: '#8F3900',
+  },
+  {
+    id: 'javascripthoisting',
+    title: 'JS - Hoisting',
+    color: '#204A45',
+  },
+  {
+    id: 'javascriptthiskeyword',
+    title: 'JS - "this" keyword',
+    color: '#ff6600',
   },
   {
     id: 'javascriptconstandlet',
-    title: 'JS ES6 - Const and Let',
-    color: '#339933',
+    title: 'JS ES6 - Const and Let (Scoping)',
+    color: '#9A2617',
   },
   {
     id: 'javascriptarrowfunction',
@@ -68,12 +88,22 @@ let skills = [
   {
     id: 'javascriptternary',
     title: 'JS ES6 - Ternary Operator',
-    color: '#0066ff',
+    color: '#234B53',
   },
   {
-    id: 'javascriptclosures',
-    title: 'JS - Closures',
-    color: '#ff6600',
+    id: 'javascriptmapmethod',
+    title: 'JS ES6 - Map Method',
+    color: '#0A4D34',
+  },
+  {
+    id: 'javascriptfiltermethod',
+    title: 'JS ES6 - Filter Method',
+    color: '#B40330',
+  },
+  {
+    id: 'javascriptreducemethod',
+    title: 'JS ES6 - Reduce Method',
+    color: '#004EC2',
   },
 ];
 
@@ -129,7 +159,9 @@ export default class App extends Component {
             {this.state.count} out of {skills.length}
           </C.Counter>
         </C.CounterContainer>
-        <C.BoxContainer>{this.renderSkills()}</C.BoxContainer>
+        <C.BoxContainer test={skills.length}>
+          {this.renderSkills()}
+        </C.BoxContainer>
       </C.Container>
     );
   }
