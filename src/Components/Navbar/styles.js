@@ -8,7 +8,6 @@ const Container = styled.div`
   height: 10rem;
   width: 100%;
   background: orchid;
-  position: sticky;
 `;
 
 const Title = styled.h1`
