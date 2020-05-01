@@ -159,7 +159,7 @@ export default class App extends Component {
             {this.state.count} out of {skills.length}
           </C.Counter>
         </C.CounterContainer>
-        <C.BoxContainer test={skills.length}>
+        <C.BoxContainer columns={skills.length}>
           {this.renderSkills()}
         </C.BoxContainer>
       </C.Container>
