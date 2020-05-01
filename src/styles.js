@@ -28,7 +28,8 @@ const Counter = styled.h1`
 const BoxContainer = styled.div`
   display: grid;
   grid-template-rows: repeat(${(props) => props.box}, 250px);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: stretch;
   grid-gap: 30px;
   width: 100%;
   height: 100vh;

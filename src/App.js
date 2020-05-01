@@ -4,7 +4,7 @@ import * as C from './styles';
 import Button from './Components/Button';
 import Navbar from './Components/Navbar';
 
-let skills = [
+const skills = [
   {
     id: 'html',
     title: 'HTML',
