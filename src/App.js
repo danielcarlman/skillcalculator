@@ -12,27 +12,27 @@ const skills = [
   },
   {
     id: 'git',
-    title: 'Git (Version Control)',
+    title: 'Git',
     color: '#093145',
   },
   {
     id: 'cssboxmodel',
-    title: 'CSS - Box Model',
+    title: 'CSS Box Model',
     color: '#339933',
   },
   {
     id: 'cssflexbox',
-    title: 'CSS - Flexbox',
+    title: 'CSS Flexbox',
     color: '#394007',
   },
   {
     id: 'cssgrid',
-    title: 'CSS - Grid',
+    title: 'CSS Grid',
     color: '#464F30',
   },
   {
     id: 'csscustomproperties',
-    title: 'CSS - Custom Properties',
+    title: 'CSS Variables',
     color: '#215E39',
   },
   {
@@ -42,67 +42,67 @@ const skills = [
   },
   {
     id: 'csssass',
-    title: 'CSS - SASS',
+    title: 'SASS',
     color: '#00005C',
   },
   {
     id: 'cssless',
-    title: 'CSS - LESS',
+    title: 'LESS',
     color: '#342E5C',
   },
   {
     id: 'cssmediaqueries',
-    title: 'CSS - Media Queries',
+    title: 'Media Queries',
     color: '#8B008B',
   },
   {
     id: 'cssstyledcomponents',
-    title: 'JS/CSS - Styled Components',
+    title: 'Styled Components',
     color: '#910D27',
   },
   {
     id: 'javascriptclosures',
-    title: 'JS - Closures',
+    title: 'Closures',
     color: '#8F3900',
   },
   {
     id: 'javascripthoisting',
-    title: 'JS - Hoisting',
+    title: 'Hoisting',
     color: '#204A45',
   },
   {
     id: 'javascriptthiskeyword',
-    title: 'JS - "this" keyword',
+    title: '"this" keyword',
     color: '#ff6600',
   },
   {
     id: 'javascriptconstandlet',
-    title: 'JS ES6 - Const and Let (Scoping)',
+    title: 'Const and Let',
     color: '#9A2617',
   },
   {
-    id: 'javascriptarrowfunction',
-    title: 'JS ES6 - Arrow Function',
+    id: 'javascriptarrowfunctions',
+    title: 'Arrow Functions',
     color: '#cc33ff',
   },
   {
     id: 'javascriptternary',
-    title: 'JS ES6 - Ternary Operator',
+    title: 'Ternary Operator',
     color: '#234B53',
   },
   {
     id: 'javascriptmapmethod',
-    title: 'JS ES6 - Map Method',
+    title: 'Map Method',
     color: '#0A4D34',
   },
   {
     id: 'javascriptfiltermethod',
-    title: 'JS ES6 - Filter Method',
+    title: 'Filter Method',
     color: '#B40330',
   },
   {
     id: 'javascriptreducemethod',
-    title: 'JS ES6 - Reduce Method',
+    title: 'Reduce Method',
     color: '#004EC2',
   },
 ];
@@ -140,7 +140,7 @@ export default class App extends Component {
   renderSkills = () => {
     return skills.map((skill) => (
       <C.Box color={skill.color}>
-        <h1>{skill.title}</h1>
+        <C.BoxText>{skill.title}</C.BoxText>
         <Button
           onClick={this.toggleButton}
           checked={this.state[skill.id]}
