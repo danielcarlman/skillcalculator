@@ -29,7 +29,6 @@ const BoxContainer = styled.div`
   display: grid;
   grid-auto-rows: minmax(250px, 1fr);
   grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-  align-items: stretch;
   grid-gap: 30px;
   width: 100%;
   height: 100%;
