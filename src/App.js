@@ -1,152 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import * as C from './styles';
+import skills from './skills';
 import Button from './Components/Button';
 import Navbar from './Components/Navbar';
-
-const skills = [
-  {
-    id: 'html',
-    title: 'HTML',
-    color: '#930700',
-    info:
-      'HTML is the standard markup language for Web pages. With HTML you can create your own Website. HTML is easy to learn - You will enjoy it!',
-    link: 'https://www.w3schools.com/html/',
-  },
-  {
-    id: 'git',
-    title: 'Git',
-    color: '#093145',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'cssboxmodel',
-    title: 'CSS Box Model',
-    color: '#339933',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'cssflexbox',
-    title: 'CSS Flexbox',
-    color: '#394007',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'cssgrid',
-    title: 'CSS Grid',
-    color: '#464F30',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'csscustomproperties',
-    title: 'CSS Variables',
-    color: '#215E39',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'cssscss',
-    title: 'CSS - SCSS',
-    color: '#5C00B8',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'csssass',
-    title: 'SASS',
-    color: '#00005C',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'cssless',
-    title: 'LESS',
-    color: '#342E5C',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'cssmediaqueries',
-    title: 'Media Queries',
-    color: '#8B008B',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'cssstyledcomponents',
-    title: 'Styled Components',
-    color: '#910D27',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'javascriptclosures',
-    title: 'Closures',
-    color: '#8F3900',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'javascripthoisting',
-    title: 'Hoisting',
-    color: '#204A45',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'javascriptthiskeyword',
-    title: '"this" keyword',
-    color: '#ff6600',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'javascriptconstandlet',
-    title: 'Const and Let',
-    color: '#9A2617',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'javascriptarrowfunctions',
-    title: 'Arrow Functions',
-    color: '#cc33ff',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'javascriptternary',
-    title: 'Ternary Operator',
-    color: '#234B53',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'javascriptmapmethod',
-    title: 'Map Method',
-    color: '#0A4D34',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'javascriptfiltermethod',
-    title: 'Filter Method',
-    color: '#B40330',
-    info: '',
-    link: '',
-  },
-  {
-    id: 'javascriptreducemethod',
-    title: 'Reduce Method',
-    color: '#004EC2',
-    info: '',
-    link: '',
-  },
-];
 
 export default class App extends Component {
   constructor(props) {
@@ -179,7 +36,6 @@ export default class App extends Component {
 
   toggleButton = (value) => {
     this.setState({ [value]: !this.state[value] });
-    console.log(value);
 
     this.state[value]
       ? this.setState(({ count }) => ({
@@ -191,26 +47,33 @@ export default class App extends Component {
   };
 
   renderSkills = () => {
-    if (this.state.isClicked) {
-      return skills.map((skill) => (
-        <C.Box color={skill.color}>
-          <C.BoxText>{skill.title}</C.BoxText>
+    return skills.map((skill, i) => (
+      <C.Box isClicked={this.state.isClicked} color={skill.color}>
+        <C.BoxText>{skill.title}</C.BoxText>
+
+        {this.state.isClicked && [
+          <C.InfoText>
+            <a
+              href={skill.link}
+              target='_blank'
+              rel='noopener noreferrer'
+              key={i}
+            >
+              <C.InfoText>{skill.info}</C.InfoText>
+              Learn more
+            </a>
+          </C.InfoText>,
+        ]}
+
+        {!this.state.isClicked && (
           <Button
             onClick={this.toggleButton}
             checked={this.state[skill.id]}
             value={skill.id}
           />
-        </C.Box>
-      ));
-    } else {
-      return skills.map((skill) => (
-        <C.Box color={skill.color}>
-          <C.BoxText>{skill.title}</C.BoxText>
-          <C.BoxText>{skill.info}</C.BoxText>
-          <C.BoxText>{skill.link}</C.BoxText>
-        </C.Box>
-      ));
-    }
+        )}
+      </C.Box>
+    ));
   };
 
   render() {
