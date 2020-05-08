@@ -9,7 +9,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isClicked: true,
+      isClicked: false,
       count: 0,
       html: false,
       git: false,
@@ -48,7 +48,7 @@ export default class App extends Component {
 
   renderSkills = () => {
     return skills.map((skill, i) => (
-      <C.Box isClicked={this.state.isClicked} color={skill.color}>
+      <C.Box color={skill.color}>
         <C.BoxText>{skill.title}</C.BoxText>
 
         {this.state.isClicked && [
@@ -85,7 +85,9 @@ export default class App extends Component {
             {this.state.count} out of {skills.length}
           </C.Counter>
         </C.CounterContainer>
-        <C.BoxContainer>{this.renderSkills()}</C.BoxContainer>
+        <C.BoxContainer isClicked={this.state.isClicked}>
+          {this.renderSkills()}
+        </C.BoxContainer>
       </C.Container>
     );
   }

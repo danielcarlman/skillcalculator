@@ -29,7 +29,7 @@ const BoxContainer = styled.div`
   display: grid;
   grid-auto-rows: ${(props) =>
     props.isClicked ? '1fr' : 'minmax(250px, 1fr)'};
-  grid-auto-columns: ${(props) =>
+  grid-template-columns: ${(props) =>
     props.isClicked ? '1fr' : 'repeat(auto-fill, minmax(22rem, 1fr))'};
   grid-gap: 30px;
   width: 100%;
