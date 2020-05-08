@@ -9,20 +9,30 @@ const Container = styled.div`
 `;
 const CounterContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   top: 0;
   width: 100%;
-  height: 100px;
-  position: sticky;
+  position: ${(props) => (props.isClicked ? 'static' : 'sticky')};
   background: rgb(0, 0, 0, 0.75);
 `;
 
 const Counter = styled.h1`
   color: orchid;
-  font-size: 5rem;
+  font-size: ${(props) => (props.isClicked ? '3rem' : '5rem')};
   font-weight: 700;
   opacity: 1;
+  margin: 2rem 2rem;
+`;
+
+const Results = styled.h1`
+  display: ${(props) => (props.isClicked ? 'block' : 'none')};
+  color: orchid;
+  font-size: 3rem;
+  font-weight: 700;
+  opacity: 1;
+  margin: 2rem 2rem;
 `;
 
 const BoxContainer = styled.div`
@@ -80,6 +90,7 @@ export {
   Container,
   CounterContainer,
   Counter,
+  Results,
   BoxContainer,
   BoxText,
   Box,

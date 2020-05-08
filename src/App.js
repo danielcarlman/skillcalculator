@@ -77,15 +77,17 @@ export default class App extends Component {
   };
 
   render() {
+    const { count, isClicked } = this.state;
     return (
       <C.Container>
         <Navbar />
-        <C.CounterContainer>
+        <C.CounterContainer isClicked={isClicked}>
+          <C.Results isClicked={isClicked}>This is your result:</C.Results>
           <C.Counter>
-            {this.state.count} out of {skills.length}
+            {count} out of {skills.length}
           </C.Counter>
         </C.CounterContainer>
-        <C.BoxContainer isClicked={this.state.isClicked}>
+        <C.BoxContainer isClicked={isClicked}>
           {this.renderSkills()}
         </C.BoxContainer>
       </C.Container>
