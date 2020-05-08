@@ -16,6 +16,7 @@ const CounterContainer = styled.div`
   width: 100%;
   position: ${(props) => (props.isClicked ? 'static' : 'sticky')};
   background: rgb(0, 0, 0, 0.75);
+  margin-top: 2rem;
 `;
 
 const Counter = styled.h1`
@@ -23,7 +24,7 @@ const Counter = styled.h1`
   font-size: ${(props) => (props.isClicked ? '3rem' : '5rem')};
   font-weight: 700;
   opacity: 1;
-  margin: 2rem 2rem;
+  margin: 0;
 `;
 
 const Results = styled.h1`
@@ -32,7 +33,7 @@ const Results = styled.h1`
   font-size: 3rem;
   font-weight: 700;
   opacity: 1;
-  margin: 2rem 2rem;
+  margin: 0;
 `;
 
 const BoxContainer = styled.div`

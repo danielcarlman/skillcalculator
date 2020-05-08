@@ -9,7 +9,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isClicked: false,
+      isClicked: true,
       count: 0,
       html: false,
       git: false,
