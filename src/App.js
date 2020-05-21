@@ -52,17 +52,42 @@ export default class App extends Component {
         <C.BoxText>{skill.title}</C.BoxText>
 
         {this.state.isClicked && [
-          <C.InfoText>
-            <a
-              href={skill.link}
-              target='_blank'
-              rel='noopener noreferrer'
-              key={i}
-            >
-              <C.InfoText>{skill.info}</C.InfoText>
-              Learn more
-            </a>
-          </C.InfoText>,
+          <C.InfoContainer>
+            <C.InfoText>{skill.info}</C.InfoText>
+            <C.InfoText>
+              <a
+                href={skill.video}
+                target='_blank'
+                rel='noopener noreferrer'
+                key={i}
+              >
+                <C.InfoText>
+                  Featured Video: <br /> "<em>{skill.videotitle}</em>" by{' '}
+                  {skill.videoauthor}
+                </C.InfoText>
+              </a>
+            </C.InfoText>
+            <C.InfoText>
+              <a
+                href={skill.link}
+                target='_blank'
+                rel='noopener noreferrer'
+                key={i}
+              >
+                Learn more
+              </a>
+              <C.InfoText>
+                <a
+                  href={skill.practice}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  key={i}
+                >
+                  {skill.practice ? 'Practice!' : ''}
+                </a>
+              </C.InfoText>
+            </C.InfoText>
+          </C.InfoContainer>,
         ]}
 
         {!this.state.isClicked && (

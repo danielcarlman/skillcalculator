@@ -69,8 +69,16 @@ const Box = styled.div`
   padding: 5rem 1rem;
 `;
 
+const InfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const InfoText = styled.h2`
   font-size: 2.5rem;
+  margin: 2rem 2rem;
 
   @media screen and (max-width: 600px) {
     font-size: 1.5rem;
@@ -95,5 +103,6 @@ export {
   BoxContainer,
   BoxText,
   Box,
+  InfoContainer,
   InfoText,
 };
