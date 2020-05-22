@@ -120,9 +120,13 @@ export default class App extends Component {
         <Navbar />
         <C.CounterContainer isClicked={isClicked}>
           <C.Results isClicked={isClicked}>This is your result:</C.Results>
-          <C.Counter>
-            {count} out of {skills.length}
-          </C.Counter>
+          {isClicked ? (
+            <C.Counter>{(count / skills.length) * 100}%</C.Counter>
+          ) : (
+            <C.Counter>
+              {count} out of {skills.length}
+            </C.Counter>
+          )}
         </C.CounterContainer>
         <C.BoxContainer isClicked={isClicked}>
           {this.renderSkills()}
