@@ -83,7 +83,9 @@ const InfoText = styled.h2`
   @media screen and (max-width: 600px) {
     font-size: 1.5rem;
   }
+`;
 
+const InfoLink = styled.div`
   a {
     font-size: 1.5rem;
     color: white;
@@ -105,4 +107,5 @@ export {
   Box,
   InfoContainer,
   InfoText,
+  InfoLink,
 };

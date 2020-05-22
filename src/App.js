@@ -9,7 +9,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isClicked: true,
+      isClicked: false,
       count: 0,
       html: false,
       git: false,
@@ -46,15 +46,20 @@ export default class App extends Component {
         }));
   };
 
+  showResults = () => {
+    this.setState({ isClicked: true });
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  };
+
   renderSkills = () => {
     return skills.map((skill, i) => (
-      <C.Box color={skill.color}>
+      <C.Box color={skill.color} checked={this.state[this.props.value]}>
         <C.BoxText>{skill.title}</C.BoxText>
 
         {this.state.isClicked && [
           <C.InfoContainer>
             <C.InfoText>{skill.info}</C.InfoText>
-            <C.InfoText>
+            <C.InfoLink>
               <a
                 href={skill.video}
                 target='_blank'
@@ -66,16 +71,20 @@ export default class App extends Component {
                   {skill.videoauthor}
                 </C.InfoText>
               </a>
-            </C.InfoText>
-            <C.InfoText>
-              <a
-                href={skill.link}
-                target='_blank'
-                rel='noopener noreferrer'
-                key={i}
-              >
-                Learn more
-              </a>
+            </C.InfoLink>
+            <C.InfoLink>
+              <C.InfoText>
+                <a
+                  href={skill.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  key={i}
+                >
+                  Learn more
+                </a>
+              </C.InfoText>
+            </C.InfoLink>
+            <C.InfoLink>
               <C.InfoText>
                 <a
                   href={skill.practice}
@@ -86,7 +95,7 @@ export default class App extends Component {
                   {skill.practice ? 'Practice!' : ''}
                 </a>
               </C.InfoText>
-            </C.InfoText>
+            </C.InfoLink>
           </C.InfoContainer>,
         ]}
 
@@ -115,6 +124,8 @@ export default class App extends Component {
         <C.BoxContainer isClicked={isClicked}>
           {this.renderSkills()}
         </C.BoxContainer>
+
+        {!this.state.isClicked && <Button onClick={this.showResults} />}
       </C.Container>
     );
   }
