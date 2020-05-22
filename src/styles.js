@@ -54,7 +54,7 @@ const BoxText = styled.h2`
 `;
 
 const Box = styled.div`
-  display: flex;
+  display: ${(props) => (props.hidden ? 'none' : 'flex')};
   flex-direction: column;
   justify-content: ${(props) => (props.isClicked ? 'center' : 'space-between')};
 

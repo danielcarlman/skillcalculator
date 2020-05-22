@@ -53,7 +53,10 @@ export default class App extends Component {
 
   renderSkills = () => {
     return skills.map((skill, i) => (
-      <C.Box color={skill.color}>
+      <C.Box
+        color={skill.color}
+        hidden={this.state.isClicked && this.state[skill.id]}
+      >
         <C.BoxText>{skill.title}</C.BoxText>
 
         {this.state.isClicked && [
