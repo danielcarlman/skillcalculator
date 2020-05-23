@@ -65,6 +65,7 @@ const skills = [
     video: 'https://www.youtube.com/watch?v=EFafSYg-PkI',
     videotitle: 'CSS Grid Tutorial | CSS Grid Crash Course',
     videoauthor: 'Dev Ed',
+    practice: 'https://cssgridgarden.com/',
   },
   {
     id: 'csscustomproperties',

@@ -51,6 +51,25 @@ export default class App extends Component {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   };
 
+  renderMessage = (arg) => {
+    switch (true) {
+      case arg >= 0 && arg <= 20:
+        return 'Still a lot to learn!';
+      case arg >= 25 && arg <= 40:
+        return "You're doing well! Keep going!";
+      case arg >= 45 && arg <= 60:
+        return "You're doing great!";
+      case arg >= 65 && arg <= 80:
+        return "You're pretty much ready for React!";
+      case arg >= 85 && arg <= 90:
+        return "You're almost there!";
+      case arg >= 90 && arg <= 100:
+        return 'You should be working as a React Developer already!';
+      default:
+        return 'Error';
+    }
+  };
+
   renderSkills = () => {
     return skills.map((skill, i) => (
       <C.Box
@@ -115,13 +134,19 @@ export default class App extends Component {
 
   render() {
     const { count, isClicked } = this.state;
+    const result = (count / skills.length) * 100;
     return (
       <C.Container>
         <Navbar />
         <C.CounterContainer isClicked={isClicked}>
           <C.Results isClicked={isClicked}>This is your result:</C.Results>
           {isClicked ? (
-            <C.Counter>{(count / skills.length) * 100}%</C.Counter>
+            [
+              <C.Counter>{result}%</C.Counter>,
+              <C.Results isClicked={isClicked}>
+                {this.renderMessage(result)}
+              </C.Results>,
+            ]
           ) : (
             <C.Counter>
               {count} out of {skills.length}
