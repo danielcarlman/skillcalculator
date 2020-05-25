@@ -43,7 +43,10 @@ const BoxContainer = styled.div`
   grid-template-columns: ${(props) =>
     props.isClicked ? '1fr' : 'repeat(auto-fill, minmax(22rem, 1fr))'};
   grid-gap: 30px;
-  width: 100%;
+  width: 80%;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
   height: 100%;
   padding: 30px 50px;
 `;

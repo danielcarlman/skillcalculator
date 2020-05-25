@@ -7,16 +7,38 @@ const Container = styled.div`
   justify-content: space-between;
   height: 10rem;
   width: 100%;
-  background: orchid;
+  background: #215e39;
   padding: 2rem 6rem;
 `;
 
+const Logo = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
 const NavbarItem = styled.h1`
-  font-size: 3rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin: 0.5rem 0.5rem;
+  line-height: 3rem;
 
   @media screen and (max-width: 600px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
 `;
 
-export { Container, NavbarItem };
+const NavImage = styled.div`
+  img {
+    width: 5rem;
+    margin-right: 3rem;
+
+    @media screen and (max-width: 600px) {
+      width: 4rem;
+      margin-right: 1rem;
+    }
+  }
+`;
+
+export { Container, Logo, NavbarItem, NavImage };

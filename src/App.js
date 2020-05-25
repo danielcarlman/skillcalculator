@@ -53,17 +53,17 @@ export default class App extends Component {
 
   renderMessage = (arg) => {
     switch (true) {
-      case arg >= 0 && arg <= 20:
+      case arg < 20:
         return 'Still a lot to learn!';
-      case arg >= 25 && arg <= 40:
+      case arg < 40:
         return "You're doing well! Keep going!";
-      case arg >= 45 && arg <= 60:
+      case arg < 60:
         return "You're doing great!";
-      case arg >= 65 && arg <= 80:
+      case arg < 80:
         return "You're pretty much ready for React!";
-      case arg >= 85 && arg <= 90:
+      case arg < 90:
         return "You're almost there!";
-      case arg >= 90 && arg <= 100:
+      case arg <= 100:
         return 'You should be working as a React Developer already!';
       default:
         return 'Error';
