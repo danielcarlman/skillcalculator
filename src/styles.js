@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   display: flex;
@@ -30,6 +29,7 @@ const Counter = styled.h1`
 
 const Results = styled.h1`
   display: ${(props) => (props.isClicked ? 'block' : 'none')};
+  text-align: center;
   color: orchid;
   font-size: 3rem;
   font-weight: 700;
@@ -89,20 +89,14 @@ const InfoText = styled.h2`
   }
 `;
 
-const InfoLink = styled.div`
-  a {
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-`;
-
-const ExternalLink = styled.a`
+const Link = styled.a`
+  font-size: 1.5rem;
+  color: white;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export {
@@ -115,6 +109,5 @@ export {
   Box,
   InfoContainer,
   InfoText,
-  InfoLink,
-  ExternalLink,
+  Link,
 };
