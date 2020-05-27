@@ -19,6 +19,7 @@ const Logo = styled.div`
 
 const NavbarItem = styled.h1`
   font-family: 'Press Start 2P', cursive;
+  color: white;
   font-size: 2rem;
   margin: 0.5rem 0.5rem;
   line-height: 3rem;

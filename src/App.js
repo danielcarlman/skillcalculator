@@ -4,7 +4,6 @@ import * as C from './styles';
 import skills from './skills';
 import Button from './Components/Button';
 import ButtonResults from './Components/ButtonResults';
-import Navbar from './Components/Navbar';
 
 export default class App extends Component {
   constructor(props) {
@@ -138,7 +137,6 @@ export default class App extends Component {
     const result = (count / skills.length) * 100;
     return (
       <C.Container>
-        <Navbar />
         <C.CounterContainer isClicked={isClicked}>
           <C.Results isClicked={isClicked}>This is your result:</C.Results>
           {isClicked ? (
