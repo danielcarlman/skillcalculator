@@ -29,12 +29,12 @@ const Counter = styled.h1`
 
 const Results = styled.h1`
   display: ${(props) => (props.isClicked ? 'block' : 'none')};
+  margin: 1rem;
   text-align: center;
   color: orchid;
   font-size: 3rem;
   font-weight: 700;
   opacity: 1;
-  margin: 0;
 `;
 
 const BoxContainer = styled.div`
@@ -64,6 +64,7 @@ const Box = styled.div`
 
   @media screen and (max-width: 600px) {
     justify-content: center;
+    max-height: 50rem;
   }
 
   align-items: center;

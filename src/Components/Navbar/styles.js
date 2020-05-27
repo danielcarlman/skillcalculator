@@ -56,4 +56,6 @@ const StyledLink = styled(Link)`
   }
 `;
 
-export { Container, Logo, NavbarItem, NavImage, StyledLink };
+const Image = styled.img``;
+
+export { Container, Logo, NavbarItem, NavImage, StyledLink, Image };

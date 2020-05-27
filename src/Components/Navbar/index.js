@@ -1,7 +1,6 @@
 import React from 'react';
 import * as C from './styles';
 import logo from './assets/calculator.png';
-import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -9,7 +8,7 @@ export default function Navbar() {
       <C.StyledLink to='/'>
         <C.Logo>
           <C.NavImage>
-            <img alt='logo' src={logo} />
+            <C.Image alt='logo' src={logo} />
           </C.NavImage>
           <C.NavbarItem>
             React Skill
