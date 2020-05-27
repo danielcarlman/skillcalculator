@@ -149,7 +149,7 @@ const skills = [
   {
     id: 'javascriptthiskeyword',
     title: '"this" keyword',
-    color: '#ff6600',
+    color: '#9A2617',
     info:
       'The JavaScript this keyword refers to the object it belongs to. It has different values depending on where it is used.',
     link: 'https://www.w3schools.com/js/js_this.asp',
@@ -160,7 +160,7 @@ const skills = [
   {
     id: 'javascriptconstandlet',
     title: 'Scope',
-    color: '#9A2617',
+    color: '#4A4A4A',
     info:
       'Scope is the accessibility of variables, functions, and objects in some particular part of your code during runtime. In other words, scope determines the visibility of variables and other resources in areas of your code.',
     link: 'https://scotch.io/tutorials/understanding-scope-in-javascript',
@@ -171,7 +171,7 @@ const skills = [
   {
     id: 'javascriptarrowfunctions',
     title: 'Arrow Functions',
-    color: '#cc33ff',
+    color: '#234B53',
     info:
       'Arrow functions were introduced in ES6. Arrow functions allow us to write shorter function syntax.',
     link: 'https://www.w3schools.com/js/js_arrow_function.asp',
@@ -182,7 +182,7 @@ const skills = [
   {
     id: 'javascriptternary',
     title: 'Ternary Operator',
-    color: '#234B53',
+    color: '#cc33ff',
     info:
       'The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy. This operator is frequently used as a shortcut for the if statement.',
     link:

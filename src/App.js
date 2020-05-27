@@ -3,6 +3,7 @@ import './App.css';
 import * as C from './styles';
 import skills from './skills';
 import Button from './Components/Button';
+import ButtonResults from './Components/ButtonResults';
 import Navbar from './Components/Navbar';
 
 export default class App extends Component {
@@ -157,7 +158,9 @@ export default class App extends Component {
           {this.renderSkills()}
         </C.BoxContainer>
 
-        {!this.state.isClicked && <Button onClick={this.showResults} />}
+        {!this.state.isClicked && (
+          <ButtonResults onClick={this.showResults} text='Results' />
+        )}
       </C.Container>
     );
   }
