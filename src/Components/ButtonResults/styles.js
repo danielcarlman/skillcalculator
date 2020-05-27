@@ -14,6 +14,7 @@ const ButtonResults = styled.button`
 
   :hover {
     transform: scale(1.1);
+    filter: brightness(1.5);
   }
 `;
 
