@@ -82,17 +82,12 @@ export default class App extends Component {
           <C.InfoContainer>
             <C.InfoText>{skill.info}</C.InfoText>
             <C.InfoLink>
-              <a
-                href={skill.video}
-                target='_blank'
-                rel='noopener noreferrer'
-                key={i}
-              >
+              <C.ExternalLink href={skill.video}>
                 <C.InfoText>
                   Featured Video: <br /> "<em>{skill.videotitle}</em>" by{' '}
                   {skill.videoauthor}
                 </C.InfoText>
-              </a>
+              </C.ExternalLink>
             </C.InfoLink>
             <C.InfoLink>
               <C.InfoText>

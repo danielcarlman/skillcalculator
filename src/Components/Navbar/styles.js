@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   display: flex;
@@ -23,6 +24,7 @@ const NavbarItem = styled.h1`
   font-size: 2rem;
   margin: 0.5rem 0.5rem;
   line-height: 3rem;
+  text-decoration: none;
 
   @media screen and (max-width: 600px) {
     font-size: 1.5rem;
@@ -42,4 +44,16 @@ const NavImage = styled.div`
   }
 `;
 
-export { Container, Logo, NavbarItem, NavImage };
+const StyledLink = styled(Link)`
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+`;
+
+export { Container, Logo, NavbarItem, NavImage, StyledLink };

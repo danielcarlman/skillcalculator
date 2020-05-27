@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   display: flex;
@@ -100,6 +101,10 @@ const InfoLink = styled.div`
   }
 `;
 
+const ExternalLink = styled.a`
+  text-decoration: none;
+`;
+
 export {
   Container,
   CounterContainer,
@@ -111,4 +116,5 @@ export {
   InfoContainer,
   InfoText,
   InfoLink,
+  ExternalLink,
 };
