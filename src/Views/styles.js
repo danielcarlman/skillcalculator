@@ -11,25 +11,48 @@ const Container = styled.div`
 const Box = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: ${(props) => (props.isClicked ? 'center' : 'space-between')};
+  justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: #093145;
   border-radius: 30px;
-  text-align: center;
+  text-align: left;
   margin: 5rem;
   padding: 1rem 5rem;
   width: 80%;
 `;
 
 const BoxText = styled.h2`
-  font-size: 5rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 4rem;
+  line-height: 6rem;
   font-weight: 700;
+  text-align: center;
+
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
 `;
 
 const BoxSmallText = styled.h3`
   font-size: 3rem;
   font-weight: 700;
   line-height: 5rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
 `;
 
-export { Container, BoxText, Box, BoxSmallText };
+const TechList = styled.ul`
+  list-style-type: decimal;
+`;
+
+const TechItem = styled.li``;
+
+const Link = styled.a`
+  color: white;
+`;
+
+export { Container, BoxText, Box, BoxSmallText, TechList, TechItem, Link };
