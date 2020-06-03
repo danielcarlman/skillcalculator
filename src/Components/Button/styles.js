@@ -19,4 +19,8 @@ const Button = styled.button`
   }
 `;
 
+Button.defaultProps = {
+  'data-id': 'Button for Checking Skills',
+};
+
 export { Button };

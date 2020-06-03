@@ -18,7 +18,7 @@ const Logo = styled.div`
   justify-content: space-between;
 `;
 
-const NavbarItem = styled.h1`
+const LogoText = styled.h1`
   font-family: 'Press Start 2P', cursive;
   color: white;
   font-size: 2rem;
@@ -32,7 +32,7 @@ const NavbarItem = styled.h1`
   }
 `;
 
-const NavImage = styled.div`
+const LogoImage = styled.div`
   img {
     width: 5rem;
     margin-right: 3rem;
@@ -58,4 +58,28 @@ const StyledLink = styled(Link)`
 
 const Image = styled.img``;
 
-export { Container, Logo, NavbarItem, NavImage, StyledLink, Image };
+Container.defaultProps = {
+  'data-id': 'View Container',
+};
+
+Logo.defaultProps = {
+  'data-id': 'Logo Container',
+};
+
+LogoText.defaultProps = {
+  'data-id': 'Logo Text',
+};
+
+LogoImage.defaultProps = {
+  'data-id': 'Logo Image Container',
+};
+
+StyledLink.defaultProps = {
+  'data-id': 'Styled Link',
+};
+
+Image.defaultProps = {
+  'data-id': 'Image',
+};
+
+export { Container, Logo, LogoText, LogoImage, StyledLink, Image };

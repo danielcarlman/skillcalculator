@@ -7,17 +7,17 @@ export default function Navbar() {
     <C.Container>
       <C.StyledLink to='/'>
         <C.Logo>
-          <C.NavImage>
+          <C.LogoImage>
             <C.Image alt='logo' src={logo} />
-          </C.NavImage>
-          <C.NavbarItem>
+          </C.LogoImage>
+          <C.LogoText>
             React Skill
             <br /> Calculator
-          </C.NavbarItem>
+          </C.LogoText>
         </C.Logo>
       </C.StyledLink>
       <C.StyledLink to='/about'>
-        <C.NavbarItem>About</C.NavbarItem>
+        <C.LogoText>About</C.LogoText>
       </C.StyledLink>
     </C.Container>
   );

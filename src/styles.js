@@ -27,6 +27,26 @@ const Counter = styled.h1`
   margin: 0;
 `;
 
+const InstructionContainer = styled.div`
+  width: 80%;
+
+  @media screen and (max-width: 600px) {
+  }
+`;
+
+const InstructionText = styled.h1`
+  color: orchid;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  opacity: 1;
+  margin: 0;
+
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
+`;
+
 const Results = styled.h1`
   display: ${(props) => (props.isClicked ? 'block' : 'none')};
   margin: 1rem;
@@ -52,7 +72,7 @@ const BoxContainer = styled.div`
   padding: 30px 50px;
 `;
 
-const BoxText = styled.h2`
+const BoxTitle = styled.h2`
   font-size: 2.5rem;
   font-weight: 700;
 `;
@@ -100,13 +120,63 @@ const Link = styled.a`
   }
 `;
 
+Container.defaultProps = {
+  'data-id': 'View Container',
+};
+
+CounterContainer.defaultProps = {
+  'data-id': 'Counter Container',
+};
+
+Counter.defaultProps = {
+  'data-id': 'Counter Text',
+};
+
+InstructionContainer.defaultProps = {
+  'data-id': 'Instruction Container',
+};
+
+InstructionText.defaultProps = {
+  'data-id': 'Instruction Text',
+};
+
+Results.defaultProps = {
+  'data-id': 'Results Text',
+};
+
+BoxContainer.defaultProps = {
+  'data-id': 'Box Grid Container',
+};
+
+BoxTitle.defaultProps = {
+  'data-id': 'Skill Box Title',
+};
+
+Box.defaultProps = {
+  'data-id': 'Skill Box',
+};
+
+InfoContainer.defaultProps = {
+  'data-id': 'Skill Info Container',
+};
+
+InfoText.defaultProps = {
+  'data-id': 'Skill Info Text',
+};
+
+Link.defaultProps = {
+  'data-id': 'External Link',
+};
+
 export {
   Container,
   CounterContainer,
   Counter,
+  InstructionContainer,
+  InstructionText,
   Results,
   BoxContainer,
-  BoxText,
+  BoxTitle,
   Box,
   InfoContainer,
   InfoText,

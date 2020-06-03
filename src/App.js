@@ -76,7 +76,7 @@ export default class App extends Component {
         color={skill.color}
         hidden={this.state.isClicked && this.state[skill.id]}
       >
-        <C.BoxText>{skill.title}</C.BoxText>
+        <C.BoxTitle>{skill.title}</C.BoxTitle>
 
         {this.state.isClicked && [
           <C.InfoContainer>
@@ -130,6 +130,15 @@ export default class App extends Component {
             </C.Counter>
           )}
         </C.CounterContainer>
+
+        {!this.state.isClicked && (
+          <C.InstructionContainer>
+            <C.InstructionText>
+              Check the skills you already have and see if you're ready for
+              React!
+            </C.InstructionText>
+          </C.InstructionContainer>
+        )}
         <C.BoxContainer isClicked={isClicked}>
           {this.renderSkills()}
         </C.BoxContainer>

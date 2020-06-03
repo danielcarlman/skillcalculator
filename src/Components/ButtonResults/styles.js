@@ -18,4 +18,8 @@ const ButtonResults = styled.button`
   }
 `;
 
+ButtonResults.defaultProps = {
+  'data-id': 'Button for Showing Results',
+};
+
 export { ButtonResults };

@@ -21,7 +21,7 @@ const Box = styled.div`
   width: 80%;
 `;
 
-const BoxText = styled.h2`
+const Title = styled.h2`
   font-family: 'Press Start 2P', cursive;
   font-size: 4rem;
   line-height: 6rem;
@@ -55,4 +55,32 @@ const Link = styled.a`
   color: white;
 `;
 
-export { Container, BoxText, Box, BoxSmallText, TechList, TechItem, Link };
+Container.defaultProps = {
+  'data-id': 'View Container',
+};
+
+Title.defaultProps = {
+  'data-id': 'Box Title',
+};
+
+Box.defaultProps = {
+  'data-id': 'Box Container ',
+};
+
+BoxSmallText.defaultProps = {
+  'data-id': 'Small Text Box',
+};
+
+TechList.defaultProps = {
+  'data-id': 'Tech List',
+};
+
+TechItem.defaultProps = {
+  'data-id': 'Tech Item',
+};
+
+Link.defaultProps = {
+  'data-id': 'External Link',
+};
+
+export { Container, Title, Box, BoxSmallText, TechList, TechItem, Link };

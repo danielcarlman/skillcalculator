@@ -6,7 +6,7 @@ export default class About extends Component {
     return (
       <C.Container>
         <C.Box>
-          <C.BoxText>React Skill Calculator</C.BoxText>
+          <C.Title>React Skill Calculator</C.Title>
           <C.BoxSmallText>
             My name is Daniel Carlman and I'm a Front-End Developer.
           </C.BoxSmallText>
