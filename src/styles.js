@@ -34,7 +34,7 @@ const InstructionContainer = styled.div`
   }
 `;
 
-const InstructionText = styled.h1`
+const InstructionText = styled.h2`
   color: orchid;
   font-size: 3rem;
   text-align: center;
@@ -57,7 +57,7 @@ const Results = styled.h1`
   opacity: 1;
 `;
 
-const BoxContainer = styled.div`
+const BoxContainer = styled.nav`
   display: grid;
   grid-auto-rows: ${(props) =>
     props.isClicked ? '1fr' : 'minmax(250px, 1fr)'};

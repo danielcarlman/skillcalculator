@@ -8,7 +8,7 @@ export default function Navbar() {
       <C.StyledLink to='/'>
         <C.Logo>
           <C.LogoImage>
-            <C.Image alt='logo' src={logo} />
+            <C.Image alt='' src={logo} />
           </C.LogoImage>
           <C.LogoText>
             React Skill
@@ -16,7 +16,7 @@ export default function Navbar() {
           </C.LogoText>
         </C.Logo>
       </C.StyledLink>
-      <C.StyledLink to='/about'>
+      <C.StyledLink to='/about' alt='About Button' tabIndex='0'>
         <C.LogoText>About</C.LogoText>
       </C.StyledLink>
     </C.Container>

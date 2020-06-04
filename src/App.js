@@ -9,7 +9,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isClicked: false,
+      isClicked: true,
       count: 0,
       html: false,
       git: false,
@@ -104,6 +104,7 @@ export default class App extends Component {
             onClick={this.toggleButton}
             checked={this.state[skill.id]}
             value={skill.id}
+            ariaLabel={skill.title}
           />
         )}
       </C.Box>
@@ -116,16 +117,18 @@ export default class App extends Component {
     return (
       <C.Container>
         <C.CounterContainer isClicked={isClicked}>
-          <C.Results isClicked={isClicked}>This is your result:</C.Results>
+          <C.Results isClicked={isClicked} tabIndex='0'>
+            This is your result:
+          </C.Results>
           {isClicked ? (
             [
-              <C.Counter>{result}%</C.Counter>,
-              <C.Results isClicked={isClicked}>
+              <C.Counter tabIndex='0'>{result}%</C.Counter>,
+              <C.Results isClicked={isClicked} tabIndex='0'>
                 {this.renderMessage(result)}
               </C.Results>,
             ]
           ) : (
-            <C.Counter>
+            <C.Counter tabIndex='0'>
               {count} out of {skills.length}
             </C.Counter>
           )}
@@ -133,7 +136,7 @@ export default class App extends Component {
 
         {!this.state.isClicked && (
           <C.InstructionContainer>
-            <C.InstructionText>
+            <C.InstructionText tabIndex='0'>
               Check the skills you already have and see if you're ready for
               React!
             </C.InstructionText>

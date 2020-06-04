@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Container = styled.div`
+const Container = styled.nav`
   display: flex;
   flex-direction: row;
   align-items: center;

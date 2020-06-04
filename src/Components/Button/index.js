@@ -6,6 +6,7 @@ export default function Button(props) {
     <C.Button
       onClick={() => props.onClick(props.value)}
       checked={props.checked}
+      aria-label={props.checked ? 'Checked' : props.ariaLabel}
     >
       {props.checked ? 'OK ✔' : 'Check'}
     </C.Button>
