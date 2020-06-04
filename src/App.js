@@ -76,11 +76,11 @@ export default class App extends Component {
         color={skill.color}
         hidden={this.state.isClicked && this.state[skill.id]}
       >
-        <C.BoxTitle>{skill.title}</C.BoxTitle>
+        <C.BoxTitle tabIndex='0'>{skill.title}</C.BoxTitle>
 
         {this.state.isClicked && [
           <C.InfoContainer>
-            <C.InfoText>{skill.info}</C.InfoText>
+            <C.InfoText tabIndex='0'>{skill.info}</C.InfoText>
 
             <C.Link href={skill.video} target='_blank'>
               <C.InfoText>
