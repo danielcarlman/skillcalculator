@@ -68,7 +68,6 @@ const BoxContainer = styled.nav`
   @media screen and (max-width: 600px) {
     width: 100%;
   }
-  height: 100%;
   padding: 30px 50px;
 `;
 

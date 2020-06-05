@@ -9,7 +9,7 @@ const Container = styled.nav`
   height: 10rem;
   width: 100%;
   background: #215e39;
-  padding: 2rem 6rem;
+  padding: 2rem 3rem;
 `;
 
 const Logo = styled.div`
