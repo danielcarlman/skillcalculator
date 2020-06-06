@@ -104,7 +104,7 @@ export default class App extends Component {
             onClick={this.toggleButton}
             checked={this.state[skill.id]}
             value={skill.id}
-            ariaLabel={skill.title}
+            ariaLabel={`Check if you know ${skill.title}`}
           />
         )}
       </C.Box>
@@ -147,7 +147,7 @@ export default class App extends Component {
         </C.BoxContainer>
 
         {!this.state.isClicked && (
-          <ButtonResults onClick={this.showResults} text='Results' />
+          <ButtonResults onClick={this.showResults} text='Get Results' />
         )}
       </C.Container>
     );

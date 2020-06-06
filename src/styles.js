@@ -71,7 +71,7 @@ const BoxContainer = styled.nav`
   padding: 30px 50px;
 `;
 
-const BoxTitle = styled.h2`
+const BoxTitle = styled.h3`
   font-size: 2.5rem;
   font-weight: 700;
 `;
@@ -83,7 +83,6 @@ const Box = styled.div`
 
   @media screen and (max-width: 600px) {
     justify-content: center;
-    max-height: 50rem;
   }
 
   align-items: center;

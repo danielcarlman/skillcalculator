@@ -5,7 +5,7 @@ const ButtonResults = styled.button`
   font-size: 2.5rem;
   border: none;
   border-radius: 2rem;
-  padding: 2rem 10rem;
+  padding: 2rem 3rem;
   margin-bottom: 10rem;
   background-color: #215e39;
   color: white;

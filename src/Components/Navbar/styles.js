@@ -27,7 +27,7 @@ const LogoText = styled.h1`
   text-decoration: none;
 
   @media screen and (max-width: 600px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 2.5rem;
   }
 `;

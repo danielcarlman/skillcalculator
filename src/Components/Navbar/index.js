@@ -4,9 +4,13 @@ import logo from './assets/calculator.png';
 
 export default function Navbar() {
   return (
-    <C.Container>
+    <C.Container
+      role='menubar'
+      aria-label='React Skill Calculator'
+      tabIndex='0'
+    >
       <C.StyledLink to='/'>
-        <C.Logo>
+        <C.Logo role='logo' aria-label='React Skill Calculator Logo'>
           <C.LogoImage>
             <C.Image alt='' src={logo} />
           </C.LogoImage>
