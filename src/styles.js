@@ -71,7 +71,7 @@ const BoxContainer = styled.nav`
   padding: 30px 50px;
 `;
 
-const BoxTitle = styled.h3`
+const BoxTitle = styled.p`
   font-size: 2.5rem;
   font-weight: 700;
 `;
