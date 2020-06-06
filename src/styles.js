@@ -57,7 +57,7 @@ const Results = styled.h1`
   opacity: 1;
 `;
 
-const BoxContainer = styled.nav`
+const BoxContainer = styled.main`
   display: grid;
   grid-auto-rows: ${(props) =>
     props.isClicked ? '1fr' : 'minmax(250px, 1fr)'};

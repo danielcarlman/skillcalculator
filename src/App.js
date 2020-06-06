@@ -114,7 +114,7 @@ export default class App extends Component {
 
   render() {
     const { count, isClicked } = this.state;
-    const result = (count / skills.length) * 100;
+    const result = ((count / skills.length) * 100).toFixed();
     return (
       <C.Container>
         <C.CounterContainer isClicked={isClicked}>
