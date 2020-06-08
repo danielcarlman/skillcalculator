@@ -26,7 +26,7 @@ const LogoText = styled.h1`
   line-height: 3rem;
   text-decoration: none;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 60rem) {
     font-size: 1.2rem;
     line-height: 2.5rem;
   }
@@ -37,7 +37,7 @@ const LogoImage = styled.div`
     width: 5rem;
     margin-right: 3rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 60rem) {
       width: 4rem;
       margin-right: 1rem;
     }

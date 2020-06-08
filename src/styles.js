@@ -30,7 +30,7 @@ const Counter = styled.h1`
 const InstructionContainer = styled.div`
   width: 80%;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 60rem) {
   }
 `;
 
@@ -42,7 +42,7 @@ const InstructionText = styled.h2`
   opacity: 1;
   margin: 0;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 60rem) {
     font-size: 2rem;
   }
 `;
@@ -60,15 +60,15 @@ const Results = styled.h1`
 const BoxContainer = styled.main`
   display: grid;
   grid-auto-rows: ${(props) =>
-    props.isClicked ? '1fr' : 'minmax(250px, 1fr)'};
+    props.isClicked ? '1fr' : 'minmax(25rem, 1fr)'};
   grid-template-columns: ${(props) =>
     props.isClicked ? '1fr' : 'repeat(auto-fill, minmax(22rem, 1fr))'};
-  grid-gap: 30px;
+  grid-gap: 3rem;
   width: 80%;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 60rem) {
     width: 100%;
   }
-  padding: 30px 50px;
+  padding: 3rem 5rem;
 `;
 
 const BoxTitle = styled.p`
@@ -81,13 +81,13 @@ const Box = styled.div`
   flex-direction: column;
   justify-content: ${(props) => (props.isClicked ? 'center' : 'space-between')};
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 60rem) {
     justify-content: center;
   }
 
   align-items: center;
   background-color: ${(props) => props.color};
-  border-radius: 30px;
+  border-radius: 3rem;
   text-align: center;
   padding: 5rem 1rem;
 `;
@@ -103,7 +103,7 @@ const InfoText = styled.h2`
   font-size: 2.5rem;
   margin: 2rem 2rem;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 60rem) {
     font-size: 1.5rem;
   }
 `;

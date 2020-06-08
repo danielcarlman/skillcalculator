@@ -14,7 +14,7 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #093145;
-  border-radius: 30px;
+  border-radius: 3rem;
   text-align: left;
   margin: 5rem;
   padding: 1rem 5rem;
@@ -28,7 +28,7 @@ const Title = styled.h2`
   font-weight: 700;
   text-align: center;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 60rem) {
     font-size: 2rem;
     line-height: 3rem;
   }
@@ -39,7 +39,7 @@ const BoxSmallText = styled.h3`
   font-weight: 700;
   line-height: 5rem;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 60rem) {
     font-size: 1.5rem;
     line-height: 3rem;
   }
