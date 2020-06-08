@@ -6,12 +6,12 @@ I had to learn React quickly for my first job, before I was really comfortable w
 
 Here are the skills/technologies I used for this project:
 
--HTML
--CSS
--CSS Box Model
--CSS Flexbox
--CSS Grid
--Media Queries
--Styled Components
--Ternary Operator
--Map Method
+*HTML
+*CSS
+*CSS Box Model
+*CSS Flexbox
+*CSS Grid
+*Media Queries
+*Styled Components
+*Ternary Operator
+*Map Method
