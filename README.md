@@ -4,14 +4,4 @@ I created React Skill Calculator in May 2020 in order to help beginners determin
 
 I had to learn React quickly for my first job, before I was really comfortable with many of the requirements. While I was able to do it, it's not an ideal situation. Not all skills listed in here are mandatory, but they are certainly very helpful.
 
-Here are the skills/technologies I used for this project:
-
-*HTML
-*CSS
-*CSS Box Model
-*CSS Flexbox
-*CSS Grid
-*Media Queries
-*Styled Components
-*Ternary Operator
-*Map Method
+Here are the skills/technologies I used for this project: HTML, CSS, CSS Box Model, CSS Flexbox, CSS Grid, Media Queries, Styled Components, Ternary Operator and Map Method.
