@@ -8,8 +8,9 @@ const Button = styled.button`
   padding: 1rem 1.5rem;
   width: 10rem;
   min-height: 3.7rem;
-  background-color: ${(props) => (props.checked ? 'green' : 'red')};
+  background-color: ${(props) => (props.checked ? '#005C00' : '#9E0000')};
   color: white;
+  border: 0.2rem solid white;
 
   transition: all 0.2s ease-in-out;
 
