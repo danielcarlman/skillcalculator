@@ -8,7 +8,7 @@ export default function Navbar() {
       <C.StyledLink role='menuitem' to='/'>
         <C.Logo>
           <C.LogoImage>
-            <C.Image alt='' src={logo} />
+            <C.Image src={logo} />
           </C.LogoImage>
           <C.LogoText>
             React Skill
