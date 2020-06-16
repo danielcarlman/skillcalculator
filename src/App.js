@@ -105,7 +105,7 @@ export default class App extends Component {
             checked={this.state[skill.id]}
             value={skill.id}
             ariaLabel={`Check if you know ${skill.title}`}
-            ariaLabelChecked={`Checked. You checked ${this.state.count} out of ${skills.length} `}
+            ariaLabelChecked={`${skill.title} was checked! You checked ${this.state.count} out of ${skills.length} `}
           />
         )}
       </C.Box>
