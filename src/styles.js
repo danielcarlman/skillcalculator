@@ -31,9 +31,6 @@ const Counter = styled.h1`
 
 const InstructionContainer = styled.div`
   width: 80%;
-
-  @media screen and (max-width: 60rem) {
-  }
 `;
 
 const InstructionText = styled.h2`

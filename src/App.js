@@ -69,7 +69,7 @@ export default class App extends Component {
         color={skill.color}
         hidden={this.state.isClicked && this.state[skill.id]}
       >
-        <C.BoxTitle tabIndex='0'>{skill.title.toUpperCase()}</C.BoxTitle>
+        <C.BoxTitle>{skill.title.toUpperCase()}</C.BoxTitle>
 
         {this.state.isClicked && [
           <C.InfoContainer>
