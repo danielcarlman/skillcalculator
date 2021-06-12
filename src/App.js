@@ -86,9 +86,11 @@ export default class App extends Component {
               <C.InfoText>Learn more</C.InfoText>
             </C.Link>
 
-            <C.Link href={skill.practice} target='_blank'>
-              <C.InfoText>{skill.practice ? 'Practice!' : ''}</C.InfoText>
-            </C.Link>
+            {skill.practice && [
+              <C.Link href={skill.practice} target='_blank'>
+                <C.InfoText>'Practice!'</C.InfoText>
+              </C.Link>,
+            ]}
           </C.InfoContainer>,
         ]}
 

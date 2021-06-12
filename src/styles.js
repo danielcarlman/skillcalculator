@@ -26,6 +26,7 @@ const Counter = styled.h1`
   font-weight: 700;
   opacity: 1;
   margin: 0;
+  padding: 1rem 10rem;
 `;
 
 const InstructionContainer = styled.div`
@@ -69,7 +70,7 @@ const BoxContainer = styled.main`
   @media screen and (max-width: 60rem) {
     width: 100%;
   }
-  padding: 2rem;
+  padding: 5rem;
 `;
 
 const BoxTitle = styled.p`
@@ -80,7 +81,7 @@ const BoxTitle = styled.p`
 const Box = styled.div`
   display: ${(props) => (props.hidden ? 'none' : 'flex')};
   flex-direction: column;
-  justify-content: ${(props) => (props.isClicked ? 'center' : 'space-between')};
+  justify-content: space-around;
 
   @media screen and (max-width: 60rem) {
     justify-content: center;
@@ -112,11 +113,7 @@ const InfoText = styled.h2`
 const Link = styled.a`
   font-size: 1.5rem;
   color: white;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
+  text-decoration: underline;
 `;
 
 Container.defaultProps = {
