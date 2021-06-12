@@ -52,7 +52,7 @@ const Results = styled.h1`
   display: ${(props) => (props.isClicked ? 'block' : 'none')};
   margin: 1rem;
   text-align: center;
-  color: orchid;
+  color: white;
   font-size: 3rem;
   font-weight: 700;
   opacity: 1;
