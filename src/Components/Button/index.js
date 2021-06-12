@@ -7,8 +7,9 @@ export default function Button(props) {
       onClick={() => props.onClick(props.value)}
       checked={props.checked}
       aria-label={props.checked ? props.ariaLabelChecked : props.ariaLabel}
+      color={props.checked ? props.color : 'white'}
     >
-      {props.checked ? 'OK ✔' : 'Check'}
+      {props.checked ? '✔' : 'CHECK'}
     </C.Button>
   );
 }

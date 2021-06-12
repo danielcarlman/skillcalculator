@@ -51,32 +51,25 @@ export default class App extends Component {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   };
 
-  renderMessage = (arg) => {
-    switch (true) {
-      case arg < 20:
-        return 'Still a lot to learn!';
-      case arg < 40:
-        return "You're doing well! Keep going!";
-      case arg < 60:
-        return "You're doing great!";
-      case arg < 80:
-        return "You're pretty much ready for React!";
-      case arg < 90:
-        return "You're almost there!";
-      case arg <= 100:
-        return 'You should be working as a React Developer already!';
-      default:
-        return 'Error';
-    }
+  renderMessage = (points) => {
+    if (points < 20) return 'Still a lot to learn!';
+    if (points < 40) return "You're doing well! Keep going!";
+    if (points < 60) return "You're doing great!";
+    if (points < 80) return "You're pretty much ready for React!";
+    if (points < 90) return "You're almost there!";
+    if (points < 100)
+      return 'You should be working as a React Developer already!';
+
+    return 'Error';
   };
 
   renderSkills = () => {
-    return skills.map((skill, i) => (
+    return skills.map((skill) => (
       <C.Box
         color={skill.color}
         hidden={this.state.isClicked && this.state[skill.id]}
       >
-        <C.BoxTitle tabIndex='0'>{skill.title}</C.BoxTitle>
+        <C.BoxTitle tabIndex='0'>{skill.title.toUpperCase()}</C.BoxTitle>
 
         {this.state.isClicked && [
           <C.InfoContainer>
@@ -104,6 +97,7 @@ export default class App extends Component {
             onClick={this.toggleButton}
             checked={this.state[skill.id]}
             value={skill.id}
+            color={skill.color}
             ariaLabel={`Check if you know ${skill.title}`}
             ariaLabelChecked={`${skill.title} was checked! You checked ${this.state.count} out of ${skills.length} `}
           />

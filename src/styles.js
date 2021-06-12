@@ -17,10 +17,11 @@ const CounterContainer = styled.div`
   position: ${(props) => (props.isClicked ? 'static' : 'sticky')};
   background: rgb(0, 0, 0, 0.75);
   margin-top: 2rem;
+  z-index: 10;
 `;
 
 const Counter = styled.h1`
-  color: orchid;
+  color: 'ffffff';
   font-size: ${(props) => (props.isClicked ? '3rem' : '5rem')};
   font-weight: 700;
   opacity: 1;
@@ -35,7 +36,7 @@ const InstructionContainer = styled.div`
 `;
 
 const InstructionText = styled.h2`
-  color: orchid;
+  color: 'ffffff';
   font-size: 3rem;
   text-align: center;
   font-weight: 700;
@@ -60,15 +61,15 @@ const Results = styled.h1`
 const BoxContainer = styled.main`
   display: grid;
   grid-auto-rows: ${(props) =>
-    props.isClicked ? '1fr' : 'minmax(25rem, 1fr)'};
+    props.isClicked ? '1fr' : 'minmax(300px, 1fr)'};
   grid-template-columns: ${(props) =>
-    props.isClicked ? '1fr' : 'repeat(auto-fill, minmax(22rem, 1fr))'};
-  grid-gap: 3rem;
-  width: 80%;
+    props.isClicked ? '1fr' : 'repeat(auto-fill, minmax(300px, 1fr))'};
+  grid-gap: 8rem;
+  width: 90%;
   @media screen and (max-width: 60rem) {
     width: 100%;
   }
-  padding: 3rem 5rem;
+  padding: 2rem;
 `;
 
 const BoxTitle = styled.p`
@@ -87,7 +88,7 @@ const Box = styled.div`
 
   align-items: center;
   background-color: ${(props) => props.color};
-  border-radius: 3rem;
+  border-radius: 2rem;
   text-align: center;
   padding: 5rem 1rem;
 `;

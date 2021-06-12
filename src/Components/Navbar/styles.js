@@ -8,7 +8,7 @@ const Container = styled.nav`
   justify-content: space-between;
   height: 10rem;
   width: 100%;
-  background: #215e39;
+  background: #373737;
   padding: 2rem 3rem;
 `;
 

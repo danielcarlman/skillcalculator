@@ -1,21 +1,20 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-  font-family: sans-serif;
-  font-size: 1.3rem;
-  border-radius: 2rem;
+  font-family: 'sans-serif';
+  font-size: 3rem;
+  border-radius: 0.8rem;
   padding: 1rem 1.5rem;
-  width: 10rem;
+  width: 20rem;
   min-height: 3.7rem;
-  background-color: ${(props) => (props.checked ? '#005C00' : '#9E0000')};
-  color: white;
-  border: 0.2rem solid white;
+  background-color: ${(props) => (props.checked ? '#ffffff' : 'transparent')};
+  color: ${(props) => (props.checked ? props.color : '#ffffff')};
+  border: 0.4rem solid white;
 
   transition: all 0.2s ease-in-out;
 
   :hover {
-    transform: scale(1.2);
-    filter: brightness(1.5);
+    transform: scale(1.1);
   }
 `;
 
