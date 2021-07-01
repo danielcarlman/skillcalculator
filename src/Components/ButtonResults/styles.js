@@ -1,20 +1,22 @@
 import styled from 'styled-components';
 
 const ButtonResults = styled.button`
-  font-family: 'Press Start 2P', cursive;
-  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
   border: none;
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 2rem 3rem;
   margin-bottom: 10rem;
-  background-color: #215e39;
+  background-color: #3d3de3;
   color: white;
+  width: 90%;
 
   transition: all 0.2s ease-in-out;
 
   :hover {
-    transform: scale(1.1);
-    filter: brightness(1.5);
+    transform: scale(1.05);
+    filter: brightness(1.2);
   }
 `;
 

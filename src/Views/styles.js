@@ -22,7 +22,7 @@ const Box = styled.div`
 `;
 
 const Title = styled.h2`
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Space Mono', monospace;
   font-size: 4rem;
   line-height: 6rem;
   font-weight: 700;

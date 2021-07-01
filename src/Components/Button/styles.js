@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-  font-family: 'sans-serif';
-  font-size: 3rem;
+  font-size: 2rem;
+  font-family: 'Poppins';
+  font-weight: bold;
   border-radius: 0.8rem;
   padding: 1rem 1.5rem;
   width: 20rem;

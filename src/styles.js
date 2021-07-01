@@ -22,11 +22,17 @@ const CounterContainer = styled.div`
 
 const Counter = styled.h1`
   color: 'ffffff';
-  font-size: ${(props) => (props.isClicked ? '3rem' : '5rem')};
+  font-size: 5rem;
+  @media screen and (max-width: 60rem) {
+    font-size: 3rem;
+  }
   font-weight: 700;
   opacity: 1;
   margin: 0;
   padding: 1rem 10rem;
+  @media screen and (max-width: 60rem) {
+    padding: 0;
+  }
 `;
 
 const InstructionContainer = styled.div`
@@ -64,10 +70,10 @@ const BoxContainer = styled.main`
     props.isClicked ? '1fr' : 'repeat(auto-fill, minmax(300px, 1fr))'};
   grid-gap: 8rem;
   width: 90%;
+  margin: 5rem 0;
   @media screen and (max-width: 60rem) {
-    width: 100%;
+    width: auto;
   }
-  padding: 5rem;
 `;
 
 const BoxTitle = styled.p`
@@ -81,7 +87,6 @@ const Box = styled.div`
   justify-content: space-around;
 
   @media screen and (max-width: 60rem) {
-    justify-content: center;
   }
 
   align-items: center;

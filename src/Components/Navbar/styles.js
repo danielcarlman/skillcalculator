@@ -19,15 +19,15 @@ const Logo = styled.div`
 `;
 
 const LogoText = styled.h1`
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Space Mono', monospace;
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0.5rem 0.5rem;
   line-height: 3rem;
   text-decoration: none;
 
   @media screen and (max-width: 60rem) {
-    font-size: 1.2rem;
+    font-size: 2rem;
     line-height: 2.5rem;
   }
 `;
@@ -56,7 +56,10 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  max-width: 50px;
+  max-height: 70px;
+`;
 
 Container.defaultProps = {
   'data-id': 'View Container',

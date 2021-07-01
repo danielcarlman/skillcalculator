@@ -1,6 +1,6 @@
 import React from 'react';
 import * as C from './styles';
-import logo from './assets/calculator.png';
+import logo from './assets/calculatorlogo.png';
 
 export default function Navbar() {
   return (
